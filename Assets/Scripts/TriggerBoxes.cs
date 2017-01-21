@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TriggerBoxes : MonoBehaviour {
 
@@ -13,9 +14,12 @@ public class TriggerBoxes : MonoBehaviour {
     public bool collidedWithNote = false;
     private GameObject note;
 
+    private SpriteRenderer sprite;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
+        sprite = GetComponent<SpriteRenderer>();	
 	}
 	
 	// Update is called once per frame
@@ -101,27 +105,32 @@ public class TriggerBoxes : MonoBehaviour {
         if (highlighted == true && highlighted2 == true)
         {
             //turn purple
-            GetComponent<Renderer>().material.color = Color.magenta;
+            //GetComponent<Renderer>().material.color = Color.magenta;
+            sprite.color = Color.magenta;
         }
         else if (highlighted == true)
         {
             //turn blue
-            GetComponent<Renderer>().material.color = Color.blue;
+            //GetComponent<Renderer>().material.color = Color.blue;
+            sprite.color = Color.blue;
         }
         else if (highlighted2 == true)
         {
             //turn orange
-            GetComponent<Renderer>().material.color = new Color(1, 0.55f, 0, 1);
+            //GetComponent<Renderer>().material.color = new Color(1, 0.55f, 0, 1);
+            sprite.color = new Color(1, 0.55f, 0, 1);
         }
         else if (highlighted == true && highlighted2 == true)
         {
             //turn purple
-            GetComponent<Renderer>().material.color = Color.magenta;
+            //GetComponent<Renderer>().material.color = Color.magenta;
+            sprite.color = Color.magenta;
         }
         else
         {
-            //turn purple
-            GetComponent<Renderer>().material.color = Color.white;
+            //turn white
+            //GetComponent<Renderer>().material.color = Color.white;
+            sprite.color = Color.white;
         }
     }
 
