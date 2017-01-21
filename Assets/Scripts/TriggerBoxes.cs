@@ -16,10 +16,14 @@ public class TriggerBoxes : MonoBehaviour {
 
     private SpriteRenderer sprite;
 
+	LoudTextSpawner loudTextSpawner;
+
 	// Use this for initialization
 	void Start ()
     {
-        sprite = GetComponent<SpriteRenderer>();	
+        sprite = GetComponent<SpriteRenderer>();
+
+		loudTextSpawner = GameObject.Find("Canvas"). GetComponent<LoudTextSpawner> ();
 	}
 	
 	// Update is called once per frame
@@ -180,19 +184,27 @@ public class TriggerBoxes : MonoBehaviour {
         float distance = Vector2.Distance(transform.position, note.transform.position);
         if (distance < 0.1f)
         {
-            Debug.Log("Perfect!");
+            // Debug.Log("Perfect!");
+			loudTextSpawner.Spawn ("Perfect!", Color.red);
+			ScoreUI.Add (100);
         }
         else if (distance < 0.25f)
         {
-            Debug.Log("Great!");
+            // Debug.Log("Great!");
+			loudTextSpawner.Spawn ("Great!", Color.green);
+			ScoreUI.Add (50);
         }
         else if (distance < 0.5f)
         {
-            Debug.Log("Good!");
+            // Debug.Log("Good!");
+			loudTextSpawner.Spawn ("Good!", Color.cyan);
+			ScoreUI.Add (25);
         }
         else if (distance < 1)
         {
-            Debug.Log("Ok");
+            // Debug.Log("Ok");
+			loudTextSpawner.Spawn ("Ok!", Color.gray);
+			ScoreUI.Add (10);
         }
         //Destroy the note
         Destroy(note.gameObject);
