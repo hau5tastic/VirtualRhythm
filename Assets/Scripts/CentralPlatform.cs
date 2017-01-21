@@ -10,10 +10,12 @@ public class CentralPlatform : MonoBehaviour {
 
 	Lane[] lanes;
 
+    public Lane[] lanes2;
+
 	void Awake() {
 		lanes = new Lane[numberOfLanes];
 		for (int i = 0; i < numberOfLanes; ++i) {
-			CreateLane (i);
+			//CreateLane (i);
 		}
 	}
 

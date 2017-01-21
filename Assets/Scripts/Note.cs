@@ -6,6 +6,6 @@ public class Note : MonoBehaviour {
 
 
 	void Update () {
-		transform.Translate (transform.up * 0.2f);
+		transform.Translate ((Vector2.down * 5) * Time.deltaTime);
 	}
 }

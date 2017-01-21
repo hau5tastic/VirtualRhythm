@@ -8,7 +8,7 @@ public class Lane : MonoBehaviour {
 	public float spawnDistance;
 
 	void Start() {
-		SpawnNote ();
+		SpawnNote2();
 	}
 
 	void SpawnNote () {
@@ -18,4 +18,11 @@ public class Lane : MonoBehaviour {
 		newNote.transform.position = spawnPosition;
 		newNote.transform.rotation = transform.localRotation;
 	}
+
+    void SpawnNote2()
+    {
+        transform.SetParent(transform);
+        Vector3 spawnPosition = transform.up * spawnDistance;
+        GameObject newNote = Instantiate(notePrefab, transform.position, transform.rotation);
+    }
 }
