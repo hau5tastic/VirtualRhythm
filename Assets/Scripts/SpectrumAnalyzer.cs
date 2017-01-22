@@ -47,6 +47,11 @@ public class SpectrumAnalyzer : MonoBehaviour {
                 Vector3 speakerScale = new Vector3((bandBuffer[i] * scaleMultiplier) + startScale, (bandBuffer[i] * scaleMultiplier) + startScale, 1.0f);
                 Vector3.ClampMagnitude(speakerScale, 0.5f);
                 spawnPoints[i].localScale = speakerScale;
+
+                //if(spawnPoints[i].localScale.magnitude > )
+                //{
+                //    spawnPoints[i].GetComponentInChildren<ParticleSystem>().Emit(15);
+                //}
             }
             else
             {

@@ -14,7 +14,6 @@ public class NoteSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -28,7 +27,7 @@ public class NoteSpawner : MonoBehaviour {
         int selectedNote = Random.Range(0, 4);
 
         Instantiate(singleNotes[selectedNote], noteSpawners[selectedSpawn].transform.position, noteSpawners[selectedSpawn].transform.rotation);
-
+        noteSpawners[selectedSpawn].GetComponentInChildren<ParticleSystem>().Emit(50);
         //Instantiate((selectedNote == 1) ? purpleNote : singleNotes[Random.Range(0, 1)],
         //  noteSpawners[Mathf.RoundToInt(selectedSpawn)].transform.position, noteSpawners[]);
     }
@@ -56,6 +55,8 @@ public class NoteSpawner : MonoBehaviour {
         //Spawn the notes and get their reference. When they are spawned, we change their appearance to the dual note sprite so that the player knows they are in pairs
         GameObject note1 = Instantiate(singleNotes[selectedNote], noteSpawners[selectedSpawn].transform.position, noteSpawners[selectedSpawn].transform.rotation);
         GameObject note2 = Instantiate(singleNotes[selectedNote2], noteSpawners[selectedSpawn2].transform.position, noteSpawners[selectedSpawn2].transform.rotation);
+        noteSpawners[selectedSpawn].GetComponentInChildren<ParticleSystem>().Emit(50);
+        noteSpawners[selectedSpawn2].GetComponentInChildren<ParticleSystem>().Emit(50);
 
         note1.GetComponent<SpriteRenderer>().sprite = dualNoteVariation;
         note2.GetComponent<SpriteRenderer>().sprite = dualNoteVariation;
@@ -65,5 +66,6 @@ public class NoteSpawner : MonoBehaviour {
     {
         int selectedSpawn = Random.Range(0, 8);
         Instantiate(purpleNote, noteSpawners[selectedSpawn].transform.position, noteSpawners[selectedSpawn].transform.rotation);
+        noteSpawners[selectedSpawn].GetComponentInChildren<ParticleSystem>().Emit(50);
     }
 }

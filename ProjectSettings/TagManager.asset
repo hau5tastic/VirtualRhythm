@@ -9,6 +9,7 @@ TagManager:
   - Orange Note
   - Purple Note
   - Spawn
+  - Particles
   layers:
   - Default
   - TransparentFX

@@ -152,7 +152,7 @@ public class TriggerBoxes : MonoBehaviour {
             //loudTextSpawner.Spawn ("Perfect!", Color.red);
             accuracyText.ActivateText("Perfect!", Color.red);
 			ScoreUI.Add (100);
-            Debug.Log(note.GetComponent<Note>().timer);
+            //Debug.Log(note.GetComponent<Note>().timer);
         }
         else if (distance < 0.25f)
         {
