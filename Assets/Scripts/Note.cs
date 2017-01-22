@@ -24,7 +24,7 @@ public class Note : MonoBehaviour {
 		PlayerScript player = col.gameObject.GetComponent<PlayerScript> ();
 		if (player) {
 			Destroy (gameObject);
-			player.health -= 2;
+			player.health -= 0.1f;
 		}
 
 
