@@ -112,4 +112,20 @@ public class SpectrumAnalyzer : MonoBehaviour {
     {
         return bandBuffer[index];
     }
+
+    public int GetHighestBand()
+    {
+        int highestBand = 0;
+
+        float highestBandValue = 0.0f;
+        for(int i = 0; i < bandBuffer.Length; i++)
+        {
+            if(highestBandValue < bandBuffer[i])
+            {
+                highestBandValue = bandBuffer[i];
+                highestBand = i;
+            }
+        }
+        return highestBand;
+    }
 }
