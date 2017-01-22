@@ -5,11 +5,22 @@ using UnityEngine;
 public class Lane : MonoBehaviour {
 
 	public GameObject notePrefab;
+    public SpectrumAnalyzer spectrumAnalyzer;
 	public float spawnDistance;
+    public int index;
 
 	void Start() {
 		SpawnNote2();
 	}
+
+    void Update()
+    {
+        float cutoff = spectrumAnalyzer.GetRekt(index);
+        if(cutoff > 5.0f)
+        {
+            SpawnNote2();
+        }
+    }
 
 	void SpawnNote () {
 		transform.SetParent (transform);

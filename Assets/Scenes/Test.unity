@@ -367,7 +367,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 5
 --- !u!1 &177294160
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +465,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 3
 --- !u!1 &184636354
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: ca0631182287eed4d8af94100c6da757, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 1
 --- !u!1 &563818880
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1012,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 4
 --- !u!23 &647545127
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1222,7 +1230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawns: {fileID: 994494729}
   startScale: 1
-  scaleMultiplier: 1.5
+  scaleMultiplier: 0.15
+  bandBuffer: []
 --- !u!82 &829828249
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1232,7 +1241,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 429e959ca7c16c04e83f8fc23e746016, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 288eb3c954c38f34eb4ec5500b7985aa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1370,7 +1379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 6
 --- !u!23 &999922056
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1466,7 +1477,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 0
 --- !u!23 &1042826473
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1625,7 +1638,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: 5feb1ee2dd18795448ae2e2ee0429c4a, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 7
 --- !u!23 &1303106441
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2660,7 +2675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notePrefab: {fileID: 1705268199635676, guid: c81b14f955d225546a72410a1b75a5e2, type: 2}
+  spectrumAnalyzer: {fileID: 829828248}
   spawnDistance: 0
+  index: 2
 --- !u!23 &1811552003
 MeshRenderer:
   m_ObjectHideFlags: 0

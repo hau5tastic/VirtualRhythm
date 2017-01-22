@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpectrumAnalyzer : MonoBehaviour {
 
     public GameObject spawns;
-    Transform[] spawnPoints;
+    Transform[] spawnPoints = new Transform[8];
 
     public float startScale = 1.0f;
     public float scaleMultiplier = 1.5f;
@@ -14,7 +14,7 @@ public class SpectrumAnalyzer : MonoBehaviour {
     AudioSource audioSource;
     float[] spectrum;
     float[] spectrumBand;
-    float[] bandBuffer;
+    public float[] bandBuffer;
     float[] bufferDecrease;
     bool useBuffer = true;
     float[] highestFreqBand;
@@ -26,8 +26,7 @@ public class SpectrumAnalyzer : MonoBehaviour {
         spectrum = new float[1024];
         spectrumBand = bandBuffer = bufferDecrease = highestFreqBand = audioBand = audioBandBuffer = new float[8];
         Transform[] tmpSpawnPoints = spawns.GetComponentsInChildren<Transform>();
-        spawnPoints = new Transform[8];
-       GameObject[] tmp = GameObject.FindGameObjectsWithTag("Spawn");
+        GameObject[] tmp = GameObject.FindGameObjectsWithTag("Spawn");
 
         for (int i = 0; i < tmp.Length; i++)
         {
@@ -42,16 +41,17 @@ public class SpectrumAnalyzer : MonoBehaviour {
         BandBuffer();
         //NormalizeAudioBands();
 
-        Debug.Log(spawnPoints.Length);
         for(int i = 1; i < spawnPoints.Length; i++)
         {
             if(useBuffer)
             {
-                spawnPoints[i].localScale = new Vector3(1.0f, (bandBuffer[i] * scaleMultiplier) + startScale, 1.0f);
+                Vector3 speakerScale = new Vector3((bandBuffer[i] * scaleMultiplier) + startScale, (bandBuffer[i] * scaleMultiplier) + startScale, 1.0f);
+                Vector3.ClampMagnitude(speakerScale, 0.5f);
+                spawnPoints[i].localScale = speakerScale;
             }
             else
             {
-                spawnPoints[i].localScale = new Vector3(1.0f, (spectrumBand[i] * scaleMultiplier) + startScale, 1.0f);
+                spawnPoints[i].localScale = new Vector3((spectrumBand[i] * scaleMultiplier) + startScale, (spectrumBand[i] * scaleMultiplier) + startScale, 1.0f);
             }            
         }
     }
@@ -106,5 +106,10 @@ public class SpectrumAnalyzer : MonoBehaviour {
             audioBand[i] = spectrumBand[i] / highestFreqBand[i];
             audioBandBuffer[i] = bandBuffer[i] / highestFreqBand[i];
         }
+    }
+
+    public float GetRekt(int index)
+    {
+        return bandBuffer[index];
     }
 }
