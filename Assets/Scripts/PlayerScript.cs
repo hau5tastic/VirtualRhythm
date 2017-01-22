@@ -11,9 +11,12 @@ public class PlayerScript : MonoBehaviour
 
     public TriggerBoxes[] triggerBoxes;
 
+	public float health;
+
     // Use this for initialization
     void Start ()
     {
+		health = 100f;
         //StartCoroutine("HighlightTriggerPanels2");
 	}
 	
@@ -43,6 +46,10 @@ public class PlayerScript : MonoBehaviour
                 triggerBoxes[i].highlighted2 = false;
             }
         }
+
+		if (health <= 0) {
+			ScoreUI.Set (0);
+		}
     }
 
     void GetJoyInputs()

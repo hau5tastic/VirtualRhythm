@@ -21,7 +21,12 @@ public class Note : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D col) {
-		if (col.gameObject.CompareTag ("Player"))
+		PlayerScript player = col.gameObject.GetComponent<PlayerScript> ();
+		if (player) {
 			Destroy (gameObject);
+			player.health -= 2;
+		}
+
+
 	}
 }
