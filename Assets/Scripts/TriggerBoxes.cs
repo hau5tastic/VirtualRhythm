@@ -82,28 +82,6 @@ public class TriggerBoxes : MonoBehaviour {
         }
     }
 
-    //This method will check joystick input to highlight the panels
-    void HighlightInput()
-    {
-        if (pScript.stickInput.x != 0 && pScript.stickInput.y != 0)
-        {
-            //If a right panel
-            if (highlightReq.x > 0)
-            {
-                //No vertical
-                if (highlightReq.y == 0)
-                {
-                    if (pScript.stickInput.x > 0.5f)
-                        highlighted = true;
-                }
-                else if (highlightReq.y > 0)
-                {
-                    if (pScript.stickInput.x > 0.5f && pScript.stickInput.y > 0.5f);
-                }
-            }
-        }
-    }
-
     void HighlightState()
     {
         if (highlighted == true && highlighted2 == true)

@@ -5,9 +5,9 @@ using UnityEngine;
 public class BackgroundLight : MonoBehaviour {
 
     public SpectrumAnalyzer spectrumAnalyzer;
-    Light light;
+    Light pulseLight;
     int highestBand;
-    Color color, previousColor = Color.white;
+    Color color = Color.white;
     Vector3 defaultPos;
 
     Color[] colors =
@@ -25,32 +25,25 @@ public class BackgroundLight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        light = GetComponent<Light>();
-        defaultPos = light.transform.position;
+        pulseLight = GetComponent<Light>();
+        defaultPos = pulseLight.transform.position;
         
 	}
 	
-	// Update is called once per frame
 	void Update () {
-
-        light.color = Color.Lerp(light.color, colors[desiredColor], elapsed);
-        light.transform.position = Vector3.Lerp(light.transform.position, light.transform.position + -Vector3.forward * 1.5f, elapsed);
+        pulseLight.color = Color.Lerp(pulseLight.color, colors[desiredColor], elapsed);
+        pulseLight.transform.position = Vector3.Lerp(pulseLight.transform.position, pulseLight.transform.position + -Vector3.forward * 1.5f, elapsed);
         if (elapsed > bpm/60)
         {
             ChangeColor();
             elapsed = 0.0f;
-            light.transform.position = defaultPos;
+            pulseLight.transform.position = defaultPos;
         }
-
-        // Debug.Log(desiredColor);
-
         elapsed += Time.deltaTime;
-
     }
 
     void ChangeColor()
     {
-
         int index = Random.Range(0, 6);
         do
         {

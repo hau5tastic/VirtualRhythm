@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour
 
     void GetJoyInputs()
     {
-        float deadzone = 0.25f;
+        //float deadzone = 0.25f;
         stickInput = new Vector2(Mathf.Round(Input.GetAxis("Horizontal")), Mathf.Round(Input.GetAxis("Vertical")));
         /*
         if (stickInput.magnitude < deadzone)

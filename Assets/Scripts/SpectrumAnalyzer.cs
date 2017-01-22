@@ -25,7 +25,6 @@ public class SpectrumAnalyzer : MonoBehaviour {
     void Start () {
         spectrum = new float[1024];
         spectrumBand = bandBuffer = bufferDecrease = highestFreqBand = audioBand = audioBandBuffer = new float[8];
-        Transform[] tmpSpawnPoints = spawns.GetComponentsInChildren<Transform>();
         GameObject[] tmp = GameObject.FindGameObjectsWithTag("Spawn");
 
         for (int i = 0; i < tmp.Length; i++)
