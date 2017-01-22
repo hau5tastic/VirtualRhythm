@@ -13,7 +13,8 @@ public class TriggerBoxes : MonoBehaviour {
     public Vector2 highlightReq; //This is the value which will check input in order to highlight the panel
     public bool collidedWithNote = false;
 
-    private GameObject note;
+    //private GameObject note;
+    private Queue<GameObject> notes;
 
     private SpriteRenderer sprite;
 
@@ -24,7 +25,7 @@ public class TriggerBoxes : MonoBehaviour {
 	void Start ()
     {
         sprite = GetComponent<SpriteRenderer>();
-
+        notes = new Queue<GameObject>();
 		loudTextSpawner = GameObject.Find("Canvas"). GetComponent<LoudTextSpawner> ();
 	}
 	
@@ -34,7 +35,7 @@ public class TriggerBoxes : MonoBehaviour {
         HighlightState();
 
         //Check if the collider is a note
-        if (note != null && collidedWithNote == true)
+        if (notes.Count != 0 && collidedWithNote == true)
         {
             //If purple highlight
             if (highlighted == true && highlighted2 == true)
@@ -44,22 +45,22 @@ public class TriggerBoxes : MonoBehaviour {
                 if (Input.GetButtonDown("Left Fire") && Input.GetButtonDown("Right Fire"))
                 {
                     //Process destroying the note
-                    if (note.tag == "Note" || note.tag == "Purple Note")
-                        DestroyNote(note);
+                    if (notes.Peek().tag == "Note" || notes.Peek().tag == "Purple Note")
+                        DestroyNote(notes.Dequeue());
                 }
                 else if (Input.GetButton("Left Fire"))
                 {
                     //Process destroying the note
                     if (Input.GetButtonDown("Right Fire"))
-                        if (note.tag == "Note" || note.tag == "Purple Note")
-                            DestroyNote(note);
+                        if (notes.Peek().tag == "Note" || notes.Peek().tag == "Purple Note")
+                            DestroyNote(notes.Dequeue());
                 }
                 else if (Input.GetButton("Right Fire"))
                 {
                     //Process destroying the note
                     if (Input.GetButtonDown("Left Fire"))
-                        if (note.tag == "Note" || note.tag == "Purple Note")
-                            DestroyNote(note);
+                        if (notes.Peek().tag == "Note" || notes.Peek().tag == "Purple Note")
+                            DestroyNote(notes.Dequeue());
                 }
             }
             else if (highlighted == true) //blue highlight
@@ -67,8 +68,8 @@ public class TriggerBoxes : MonoBehaviour {
                 if (Input.GetButtonDown("Left Fire"))
                 {
                     //Process destroying the note
-                    if (note.tag == "Note" || note.tag == "Blue Note")
-                        DestroyNote(note);
+                    if (notes.Peek().tag == "Note" || notes.Peek().tag == "Blue Note")
+                        DestroyNote(notes.Dequeue());
                 }
 
             }
@@ -77,8 +78,8 @@ public class TriggerBoxes : MonoBehaviour {
                 if (Input.GetButtonDown("Right Fire"))
                 {
                     //Process destroying the note
-                    if (note.tag == "Note" || note.tag == "Orange Note")
-                        DestroyNote(note);
+                    if (notes.Peek().tag == "Note" || notes.Peek().tag == "Orange Note")
+                        DestroyNote(notes.Dequeue());
                 }
             }
         }
@@ -121,13 +122,16 @@ public class TriggerBoxes : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D c)
     {
         collidedWithNote = true;
-        note = c.gameObject;
+        notes.Enqueue(c.gameObject);
     }
 
     void OnTriggerExit2D(Collider2D c)
     {
         collidedWithNote = false;
-        note = null;
+        if(notes.Count != 0)
+        {
+            notes.Dequeue();
+        }      
     }
 
     void OnTriggerStay2D(Collider2D c)
