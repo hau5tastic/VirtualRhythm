@@ -152,7 +152,7 @@ public class TriggerBoxes : MonoBehaviour {
             //loudTextSpawner.Spawn ("Perfect!", Color.red);
             accuracyText.ActivateText("Perfect!", Color.red);
 			ScoreUI.Add (100);
-            Debug.Log(note.GetComponent<Note>().timer);
+            //Debug.Log(note.GetComponent<Note>().timer);
         }
         else if (distance < 0.25f)
         {
@@ -180,5 +180,10 @@ public class TriggerBoxes : MonoBehaviour {
         }
         //Destroy the note
         Destroy(note.gameObject);
+    }
+
+    public Color GetSpriteColor()
+    {
+        return sprite.color;
     }
 }
