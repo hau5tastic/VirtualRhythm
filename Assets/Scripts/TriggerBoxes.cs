@@ -12,11 +12,13 @@ public class TriggerBoxes : MonoBehaviour {
 
     public Vector2 highlightReq; //This is the value which will check input in order to highlight the panel
     public bool collidedWithNote = false;
+
     private GameObject note;
 
     private SpriteRenderer sprite;
 
 	LoudTextSpawner loudTextSpawner;
+    public NoteAccuracyText accuracyText; //Appears when you land a hit on a note
 
 	// Use this for initialization
 	void Start ()
@@ -163,26 +165,30 @@ public class TriggerBoxes : MonoBehaviour {
         if (distance < 0.1f)
         {
             // Debug.Log("Perfect!");
-			loudTextSpawner.Spawn ("Perfect!", Color.red);
+            //loudTextSpawner.Spawn ("Perfect!", Color.red);
+            accuracyText.ActivateText("Perfect!", Color.red);
 			ScoreUI.Add (100);
         }
         else if (distance < 0.25f)
         {
             // Debug.Log("Great!");
-			loudTextSpawner.Spawn ("Great!", Color.green);
-			ScoreUI.Add (50);
+            //loudTextSpawner.Spawn ("Great!", Color.green);
+            accuracyText.ActivateText("Great!", Color.green);
+            ScoreUI.Add (50);
         }
         else if (distance < 0.5f)
         {
             // Debug.Log("Good!");
-			loudTextSpawner.Spawn ("Good!", Color.cyan);
-			ScoreUI.Add (25);
+            //loudTextSpawner.Spawn ("Good.", Color.cyan);
+            accuracyText.ActivateText("Good.", Color.cyan);
+            ScoreUI.Add (25);
         }
         else if (distance < 1)
         {
             // Debug.Log("Ok");
-			loudTextSpawner.Spawn ("Ok!", Color.gray);
-			ScoreUI.Add (10);
+            //loudTextSpawner.Spawn ("Ok...", Color.gray);
+            accuracyText.ActivateText("Ok...", Color.gray);
+            ScoreUI.Add (10);
         }
         //Destroy the note
         Destroy(note.gameObject);
