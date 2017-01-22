@@ -10,7 +10,7 @@ public class Lane : MonoBehaviour {
     public int index;
 
 	void Start() {
-		SpawnNote2();
+		//SpawnNote2();
 	}
 
     void Update()
