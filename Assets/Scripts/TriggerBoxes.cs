@@ -195,6 +195,7 @@ public class TriggerBoxes : MonoBehaviour {
             ScoreUI.Add (10);
         }
         //Destroy the note
+        Debug.Log(note.GetComponent<Note>().timer);
         Destroy(note.gameObject);
     }
 }

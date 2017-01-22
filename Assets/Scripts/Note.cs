@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Note : MonoBehaviour {
 
+    public float timer = 0;
+
 	void Start() {
         //Destroy (gameObject, 1.8f);
 
@@ -12,7 +14,11 @@ public class Note : MonoBehaviour {
 	}
 
 	void Update () {
-		transform.Translate ((Vector2.down * 5) * Time.deltaTime);
+		transform.Translate ((Vector2.down * 3.15f) * Time.deltaTime);
+        timer += 1 * Time.deltaTime;
+
+        //Travel towards the player in X amount of time consistently
+        
 
         //Gradually scale the notes to become larger as they approach the player
         if (transform.localScale.x < 1)

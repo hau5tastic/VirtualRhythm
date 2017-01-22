@@ -396,7 +396,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174525958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177294160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 449265209}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647545125}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999922054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -1818,7 +1818,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042826471}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303106439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811552001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 399dfcf2ee29c294c8f25b8e0865b713, type: 3}
   m_Name: 
@@ -3883,6 +3883,95 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
+--- !u!1 &1979869418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1979869420}
+  - component: {fileID: 1979869419}
+  - component: {fileID: 1979869421}
+  m_Layer: 0
+  m_Name: Note Spawner Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!111 &1979869419
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979869418}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 1367753585918a94aa9bb1dc8bb00c5e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 1367753585918a94aa9bb1dc8bb00c5e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!4 &1979869420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979869418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7678252, y: 0.40393126, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979869421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979869418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe35b8268b12e8c4788fc8c5dc48e7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singleNotes:
+  - {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  - {fileID: 1705268199635676, guid: b10ce4777cd502a4e81d64edf7347615, type: 2}
+  - {fileID: 1705268199635676, guid: ca0631182287eed4d8af94100c6da757, type: 2}
+  - {fileID: 1705268199635676, guid: c81b14f955d225546a72410a1b75a5e2, type: 2}
+  purpleNote: {fileID: 1705268199635676, guid: 5feb1ee2dd18795448ae2e2ee0429c4a, type: 2}
+  noteSpawners:
+  - {fileID: 1042826476}
+  - {fileID: 449265210}
+  - {fileID: 1811552006}
+  - {fileID: 177294161}
+  - {fileID: 647545130}
+  - {fileID: 174525959}
+  - {fileID: 999922059}
+  - {fileID: 1303106444}
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &2072851506
 GameObject:
   m_ObjectHideFlags: 0
