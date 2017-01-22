@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 24259247}
   m_Layer: 0
   m_Name: Speakers_4
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 33664942}
   - component: {fileID: 33664939}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerBottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,12 +180,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 33664936}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9238795, w: 0.38268346}
+  m_LocalPosition: {x: 1.4142137, y: -1.4142135, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1002360418}
-  m_RootOrder: 1
+  m_Father: {fileID: 1672557354}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &33664938
 MonoBehaviour:
@@ -272,38 +272,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &165929229
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 165929230}
-  m_Layer: 0
-  m_Name: Spawner Holder 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &165929230
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165929229}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: -2.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 449265210}
-  - {fileID: 177294161}
-  - {fileID: 174525959}
-  - {fileID: 1303106444}
-  m_Father: {fileID: 184636356}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!1 &174525958
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +285,7 @@ GameObject:
   - component: {fileID: 174525960}
   - component: {fileID: 174525963}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnBottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,13 +297,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174525958}
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -9, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.92387956, w: -0.38268343}
+  m_LocalPosition: {x: -6.3639607, y: -6.363961, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445352430}
-  m_Father: {fileID: 165929230}
-  m_RootOrder: 2
+  m_Father: {fileID: 994494730}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &174525960
 MeshRenderer:
@@ -413,7 +381,7 @@ GameObject:
   - component: {fileID: 177294162}
   - component: {fileID: 177294165}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnBottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,13 +393,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177294160}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 9, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9238795, w: 0.38268346}
+  m_LocalPosition: {x: 6.363961, y: -6.3639607, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1974834352}
-  m_Father: {fileID: 165929230}
-  m_RootOrder: 1
+  m_Father: {fileID: 994494730}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &177294162
 MeshRenderer:
@@ -546,9 +514,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 994494730}
-  - {fileID: 165929230}
   - {fileID: 1672557354}
-  - {fileID: 1002360418}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -628,7 +594,7 @@ GameObject:
   - component: {fileID: 438870155}
   - component: {fileID: 438870152}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerBottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,12 +606,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438870149}
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.92387956, w: -0.38268343}
+  m_LocalPosition: {x: -1.4142135, y: -1.4142137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1002360418}
-  m_RootOrder: 2
+  m_Father: {fileID: 1672557354}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &438870151
 MonoBehaviour:
@@ -743,7 +709,7 @@ GameObject:
   - component: {fileID: 445352431}
   m_Layer: 0
   m_Name: Speakers_Bottom_Left
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -809,7 +775,7 @@ GameObject:
   - component: {fileID: 449265211}
   - component: {fileID: 449265214}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,13 +787,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 449265209}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 6.3639607, y: 6.363961, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1903385432}
-  m_Father: {fileID: 165929230}
-  m_RootOrder: 0
+  m_Father: {fileID: 994494730}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &449265211
 MeshRenderer:
@@ -905,7 +871,7 @@ GameObject:
   - component: {fileID: 563818886}
   - component: {fileID: 563818883}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1022,7 +988,7 @@ GameObject:
   - component: {fileID: 647545127}
   - component: {fileID: 647545126}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1103,7 +1069,7 @@ Transform:
   m_Children:
   - {fileID: 2072851507}
   m_Father: {fileID: 994494730}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679833959
 GameObject:
@@ -1166,6 +1132,8 @@ GameObject:
   - component: {fileID: 829828245}
   - component: {fileID: 829828244}
   - component: {fileID: 829828243}
+  - component: {fileID: 829828249}
+  - component: {fileID: 829828248}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1241,6 +1209,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &829828248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829828242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ba737daa8bb6e46b398a9dc37ddf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawns: {fileID: 994494729}
+  startScale: 1
+  scaleMultiplier: 1.5
+--- !u!82 &829828249
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829828242}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 429e959ca7c16c04e83f8fc23e746016, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &994494729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,9 +1329,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1042826476}
+  - {fileID: 449265210}
   - {fileID: 1811552006}
+  - {fileID: 177294161}
   - {fileID: 647545130}
+  - {fileID: 174525959}
   - {fileID: 999922059}
+  - {fileID: 1303106444}
   m_Father: {fileID: 184636356}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1286,7 +1352,7 @@ GameObject:
   - component: {fileID: 999922056}
   - component: {fileID: 999922055}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1367,40 +1433,8 @@ Transform:
   m_Children:
   - {fileID: 1443554221}
   m_Father: {fileID: 994494730}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1002360417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1002360418}
-  m_Layer: 0
-  m_Name: Trigger Holder 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1002360418
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1002360417}
-  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1931950340}
-  - {fileID: 33664937}
-  - {fileID: 438870150}
-  - {fileID: 1318111295}
-  m_Father: {fileID: 184636356}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!1 &1042826471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1448,7 @@ GameObject:
   - component: {fileID: 1042826473}
   - component: {fileID: 1042826472}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1573,7 +1607,7 @@ GameObject:
   - component: {fileID: 1303106441}
   - component: {fileID: 1303106440}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1648,13 +1682,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303106439}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -9, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268346, w: -0.9238795}
+  m_LocalPosition: {x: -6.363961, y: 6.3639607, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 24259246}
-  m_Father: {fileID: 165929230}
-  m_RootOrder: 3
+  m_Father: {fileID: 994494730}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318111294
 GameObject:
@@ -1669,7 +1703,7 @@ GameObject:
   - component: {fileID: 1318111300}
   - component: {fileID: 1318111297}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerTopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1681,12 +1715,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1318111294}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268346, w: -0.9238795}
+  m_LocalPosition: {x: -1.4142137, y: 1.4142135, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1002360418}
-  m_RootOrder: 3
+  m_Father: {fileID: 1672557354}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1318111296
 MonoBehaviour:
@@ -1847,7 +1881,7 @@ GameObject:
   - component: {fileID: 1443554222}
   m_Layer: 0
   m_Name: Speakers_2
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2204,8 +2238,12 @@ Transform:
   - {fileID: 563818881}
   - {fileID: 1807672022}
   - {fileID: 1682799900}
+  - {fileID: 1931950340}
+  - {fileID: 33664937}
+  - {fileID: 438870150}
+  - {fileID: 1318111295}
   m_Father: {fileID: 184636356}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682799899
 GameObject:
@@ -2220,7 +2258,7 @@ GameObject:
   - component: {fileID: 1682799905}
   - component: {fileID: 1682799902}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2487,7 +2525,7 @@ GameObject:
   - component: {fileID: 1807672027}
   - component: {fileID: 1807672024}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2604,7 +2642,7 @@ GameObject:
   - component: {fileID: 1811552003}
   - component: {fileID: 1811552002}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SpawnRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2685,7 +2723,7 @@ Transform:
   m_Children:
   - {fileID: 1973614396}
   m_Father: {fileID: 994494730}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1813724692
 GameObject:
@@ -2700,7 +2738,7 @@ GameObject:
   - component: {fileID: 1813724698}
   - component: {fileID: 1813724695}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,7 +2936,7 @@ GameObject:
   - component: {fileID: 1903385433}
   m_Layer: 0
   m_Name: Speakers_4
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2964,7 +3002,7 @@ GameObject:
   - component: {fileID: 1931950345}
   - component: {fileID: 1931950342}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TriggerTopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2976,12 +3014,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931950339}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 1.4142135, y: 1.4142137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1002360418}
-  m_RootOrder: 0
+  m_Father: {fileID: 1672557354}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1931950341
 MonoBehaviour:
@@ -3079,7 +3117,7 @@ GameObject:
   - component: {fileID: 1966172573}
   m_Layer: 0
   m_Name: Speakers_0
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3143,7 +3181,7 @@ GameObject:
   - component: {fileID: 1973614397}
   m_Layer: 0
   m_Name: Speakers_3
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3207,7 +3245,7 @@ GameObject:
   - component: {fileID: 1974834353}
   m_Layer: 0
   m_Name: Speakers_Bottom_Left
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3271,7 +3309,7 @@ GameObject:
   - component: {fileID: 2072851508}
   m_Layer: 0
   m_Name: Speakers_1
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

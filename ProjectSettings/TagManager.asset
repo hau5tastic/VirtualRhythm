@@ -8,6 +8,7 @@ TagManager:
   - Blue Note
   - Orange Note
   - Purple Note
+  - Spawn
   layers:
   - Default
   - TransparentFX
