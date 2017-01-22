@@ -10,6 +10,8 @@ public class NoteSpawner : MonoBehaviour {
 
     public AnimationCurve animCurve;
 
+    public Sprite dualNoteVariation; //if notes are spawned in pairs, they have a slightly different look
+
 	// Use this for initialization
 	void Start () {
 		
@@ -51,8 +53,12 @@ public class NoteSpawner : MonoBehaviour {
             selectedSpawn2 = Random.Range(0, 8);
         }
 
-        Instantiate(singleNotes[selectedNote], noteSpawners[selectedSpawn].transform.position, noteSpawners[selectedSpawn].transform.rotation);
-        Instantiate(singleNotes[selectedNote2], noteSpawners[selectedSpawn2].transform.position, noteSpawners[selectedSpawn2].transform.rotation);
+        //Spawn the notes and get their reference. When they are spawned, we change their appearance to the dual note sprite so that the player knows they are in pairs
+        GameObject note1 = Instantiate(singleNotes[selectedNote], noteSpawners[selectedSpawn].transform.position, noteSpawners[selectedSpawn].transform.rotation);
+        GameObject note2 = Instantiate(singleNotes[selectedNote2], noteSpawners[selectedSpawn2].transform.position, noteSpawners[selectedSpawn2].transform.rotation);
+
+        note1.GetComponent<SpriteRenderer>().sprite = dualNoteVariation;
+        note2.GetComponent<SpriteRenderer>().sprite = dualNoteVariation;
     }
 
     public void SpawnPurpleNote()

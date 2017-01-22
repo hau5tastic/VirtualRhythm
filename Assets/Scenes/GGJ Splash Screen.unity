@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77de5b65967f1d74097d3fd3ba75157a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: Team Splash Screen
 --- !u!212 &744495376
 SpriteRenderer:
   m_ObjectHideFlags: 0

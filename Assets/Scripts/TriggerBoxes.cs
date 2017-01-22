@@ -125,6 +125,14 @@ public class TriggerBoxes : MonoBehaviour {
         notes.Enqueue(c.gameObject);
     }
 
+    void OnTriggerStay2D(Collider2D c)
+    {
+        //float distance = Vector2.Distance(transform.position, c.transform.position);
+
+        //if (distance < 0.025f)
+            //Debug.Log(c.GetComponent<Note>().timer);
+    }
+
     void OnTriggerExit2D(Collider2D c)
     {
         collidedWithNote = false;
@@ -134,44 +142,17 @@ public class TriggerBoxes : MonoBehaviour {
         }      
     }
 
-    void OnTriggerStay2D(Collider2D c)
-    {
-        /*
-        //Check if the collider is a note
-        if (c.tag == "Note")
-        {
-            //Debug.Log("Collided");
-            if (highlighted == true)
-            {
-                if (Input.GetButtonDown("Left Fire"))
-                {
-                    //Process destroying the note
-                    DestroyNote(c.gameObject);
-                }
-
-            }
-            else if (highlighted2 == true)
-            {
-                if (Input.GetButtonDown("Right Fire"))
-                {
-                    //Process destroying the note
-                    DestroyNote(c.gameObject);
-                }
-            }
-        }
-        */
-    }
-
     void DestroyNote(GameObject note)
     {
         //Check the distance between the note and the panel
         float distance = Vector2.Distance(transform.position, note.transform.position);
-        if (distance < 0.1f)
+        if (distance < 0.125f)
         {
             // Debug.Log("Perfect!");
             //loudTextSpawner.Spawn ("Perfect!", Color.red);
             accuracyText.ActivateText("Perfect!", Color.red);
 			ScoreUI.Add (100);
+            Debug.Log(note.GetComponent<Note>().timer);
         }
         else if (distance < 0.25f)
         {
@@ -193,9 +174,11 @@ public class TriggerBoxes : MonoBehaviour {
             //loudTextSpawner.Spawn ("Ok...", Color.gray);
             accuracyText.ActivateText("Ok...", Color.gray);
             ScoreUI.Add (10);
+
+            //Also damage the player due to poorly timed hit
+            pScript.health -= note.GetComponent<Note>().damage;
         }
         //Destroy the note
-        Debug.Log(note.GetComponent<Note>().timer);
         Destroy(note.gameObject);
     }
 }

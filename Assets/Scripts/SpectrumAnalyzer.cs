@@ -51,8 +51,12 @@ public class SpectrumAnalyzer : MonoBehaviour {
             else
             {
                 spawnPoints[i].localScale = new Vector3((spectrumBand[i] * scaleMultiplier) + startScale, (spectrumBand[i] * scaleMultiplier) + startScale, 1.0f);
-            }            
+            }
+            //The top left isn't working for some reason, so we'll just have to manually do the scaling
+            spawnPoints[0].localScale = new Vector3((bandBuffer[0] * scaleMultiplier) + startScale, (bandBuffer[0] * scaleMultiplier) + startScale, 1.0f);
         }
+        
+        
     }
 
     void MakeFrequencyBands()

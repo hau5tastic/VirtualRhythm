@@ -5,6 +5,7 @@ using UnityEngine;
 public class Note : MonoBehaviour {
 
     public float timer = 0;
+    public float damage = 5;
 
 	void Start() {
         //Destroy (gameObject, 1.8f);
@@ -14,7 +15,7 @@ public class Note : MonoBehaviour {
 	}
 
 	void Update () {
-		transform.Translate ((Vector2.down * 3.15f) * Time.deltaTime);
+		transform.Translate ((Vector2.down * 3.3f) * Time.deltaTime);
         timer += 1 * Time.deltaTime;
 
         //Travel towards the player in X amount of time consistently
@@ -29,9 +30,9 @@ public class Note : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		PlayerScript player = col.gameObject.GetComponent<PlayerScript> ();
 		if (player) {
-			Destroy (gameObject);
-			player.health -= 0.1f;
-		}
+			player.health -= damage;
+            Destroy(gameObject);
+        }
 
 
 	}

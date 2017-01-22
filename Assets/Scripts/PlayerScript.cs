@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -47,8 +48,11 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-		if (health <= 0) {
-			ScoreUI.Set (0);
+        //If the player dies
+		if (health <= 0)
+        {
+            //Game Over
+            GameOver();
 		}
     }
 
@@ -129,6 +133,11 @@ public class PlayerScript : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene("Game Over");
     }
 
 }
