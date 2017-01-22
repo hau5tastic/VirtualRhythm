@@ -7,7 +7,7 @@ public class ScoreUI : MonoBehaviour {
 
 	static Text textScore;
 	static int newScore;
-	static int score;
+	public static int score;
 
 	void Awake() {
 		textScore = GetComponent<Text> ();

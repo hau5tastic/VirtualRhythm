@@ -10,6 +10,8 @@ public class FadeoutController : MonoBehaviour {
     public float timer;
     public float endSongTime;
 
+    public ScoreUI score;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -35,7 +37,6 @@ public class FadeoutController : MonoBehaviour {
 
     void ChangeToResultsScreen()
     {
-
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Results");
     }
 }
