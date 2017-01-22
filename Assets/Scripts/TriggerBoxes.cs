@@ -181,4 +181,9 @@ public class TriggerBoxes : MonoBehaviour {
         //Destroy the note
         Destroy(note.gameObject);
     }
+
+    public Color GetSpriteColor()
+    {
+        return sprite.color;
+    }
 }
